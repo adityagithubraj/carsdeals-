@@ -1,0 +1,68 @@
+body {
+  font-family: "Rufina", serif;
+}
+
+.rufina {
+  font-family: "Rufina", serif;
+}
+
+.taviraj{
+    font-family: "Taviraj", serif;
+}
+.nav-item {
+  cursor: pointer;
+}
+.home-banner {
+  background-image: url("./assets/banner.png");
+  background-size: cover;
+  background-position: right;
+  height: 87vh;
+  .banner-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+  }
+}
+
+.foot-container{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.slick-prev, .slick-next{
+  width: 40px !important;
+}
+.custom-left-arrow , .custom-right-arrow {
+  position: absolute !important;
+  top: 100% !important;
+  margin-top: 25px;
+}
+.custom-left-arrow{
+  left: 46% !important;
+}
+.custom-right-arrow{
+  right: 46% !important;
+}
+
+  input.filter[type="radio"]{
+    position: absolute;
+  }
+input.filter[type="radio"]:checked + label{
+  background-color: #000;
+  color:#fff;
+}
+.ant-modal-wrap{
+  overflow: hidden !important;
+}
+@media only screen and (min-width:1536px){
+  .custom-left-arrow{
+    left: 47% !important;
+  }
+  .custom-right-arrow{
+    right: 47% !important;
+  } 
+}
+@media only screen and (min-width: 1600px) {
+  .banner-txt {
+    padding-top: 4.5rem;
+  }
+}
