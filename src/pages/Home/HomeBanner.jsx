@@ -17,7 +17,7 @@ function HomeBanner() {
         <h1 className="text-white text-[80px] leading-[6rem]">
           Experience the thrill <br />
           of the road with our
-          <br /> top-notch carss!"
+          <br /> top-notch cars!"
         </h1>
         <p className="text-white text-3xl">Buy a quality second-hand car</p>
         <button className="text-white banner-btn text-xl py-2 px-4 taviraj">
