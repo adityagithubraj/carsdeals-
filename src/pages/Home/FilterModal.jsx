@@ -18,12 +18,12 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
       centered
     >
       <form onSubmit={onFormSubmit}>
-        <fieldset>
+        <fieldset className="my-5">
           <label className="rufina text-2xl font-bold	">
             {" "}
             Registration Year
           </label>
-          <ul class="radioinput-list flex mt-3 gap-x-3">
+          <ul class="radioinput-list flex mt-5 gap-x-3">
             {regYears.map((year, index) => {
               return (
                 <li key={index} className="relative">
@@ -36,7 +36,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
                   />
                   <label
                     for="reg"
-                    className="cursor-pointer px-3 py-1 text-xl bg-[#CAFFAE] rounded-lg"
+                    className="cursor-pointer px-4 py-2 text-xl bg-[#CAFFAE] rounded-lg"
                   >
                     {year}
                   </label>
@@ -45,9 +45,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
             })}
           </ul>
         </fieldset>
-        <fieldset className="my-">
+        <fieldset className="my-5">
           <label className="rufina text-2xl font-bold	">Kms Driven</label>
-          <ul class="radioinput-list flex mt-3 gap-x-3">
+          <ul class="radioinput-list flex mt-5 gap-x-3">
             {kmsDriven.map((km, index) => {
               return (
                 <li key={index} className="relative">
@@ -60,7 +60,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
                   />
                   <label
                     for="reg"
-                    className="cursor-pointer px-3 py-1 text-xl bg-[#CAFFAE] rounded-lg"
+                    className="cursor-pointer px-4 py-2 text-xl bg-[#CAFFAE] rounded-lg"
                   >
                     {km}
                   </label>
@@ -69,9 +69,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
             })}
           </ul>
         </fieldset>
-        <fieldset className="my-">
+        <fieldset className="my-5">
           <label className="rufina text-2xl font-bold	">Budget</label>
-          <ul class="radioinput-list flex mt-3 gap-x-3">
+          <ul class="radioinput-list flex mt-5 gap-x-3">
             {budget.map((item, index) => {
               return (
                 <li key={index} className="relative">
@@ -84,7 +84,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
                   />
                   <label
                     for="reg"
-                    className="cursor-pointer px-3 py-1 text-xl bg-[#CAFFAE] rounded-lg"
+                    className="cursor-pointer px-4 py-2 text-xl bg-[#CAFFAE] rounded-lg"
                   >
                     {item}
                   </label>
@@ -93,9 +93,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
             })}
           </ul>
         </fieldset>
-        <fieldset className="my-">
+        <fieldset className="my-5">
           <label className="rufina text-2xl font-bold	">Body Type</label>
-          <ul class="radioinput-list flex mt-3 gap-x-3">
+          <ul class="radioinput-list flex mt-5 gap-x-3">
             {bodyTypes.map((type, index) => {
               return (
                 <li key={index} className="relative">
@@ -108,7 +108,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
                   />
                   <label
                     for="reg"
-                    className="cursor-pointer px-3 py-1 text-xl bg-[#CAFFAE] rounded-lg"
+                    className="cursor-pointer px-4 py-2 text-xl bg-[#CAFFAE] rounded-lg"
                   >
                     {type}
                   </label>
@@ -117,7 +117,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
             })}
           </ul>
         </fieldset>
-        {/* <fieldset className="my-3">
+        {/* <fieldset className="my-5">
           <label className="rufina text-2xl font-bold	">Select Brand</label>{" "}
           <br />
           <select className="w-full text-xl border-2 rounded-sm mt-1" >
@@ -130,7 +130,7 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
         <Button
           type="primary"
           htmlType="submit"
-          className="w-full bg-black pt-3 pb-9 mt-5 rounded-[10px]"
+          className="w-full bg-black pt-3 pb-9 mt-5 rounded-[10px] lg:text-2xl lg:pb-[45px]"
         >
           Apply Filters
         </Button>

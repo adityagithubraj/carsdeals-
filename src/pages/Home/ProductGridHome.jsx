@@ -42,27 +42,27 @@ function ProductGridHome() {
 
   return (
     <>
-      <div className="flex justify-end gap-x-10 my-14">
+      <div className="flex justify-end gap-x-10 my-10">
         <div className="flex justify-center items-center">
-          <span className="text-2xl text-[#717171]">Filter</span>
+          <span className="lg:text-2xl text-lg  text-[#717171]">Filter</span>
           <img
             src={filter}
-            className="ml-4 border-2 border-[#717171] rounded-md py-[8px] px-[12px] cursor-pointer"
+            className="ml-4 border-2 border-[#717171] rounded-md lg:py[8px] lg:px[12px] lg:py-[4px] px-[6px] cursor-pointer lg:w-[40px] w-[30px]"
             onClick={showModal}
           />
         </div>
         <div className="flex justify-center items-center">
-          <span className="text-2xl text-[#717171]">Sort By</span>
-          <select className="text-xl text-[#717171] border-2 border-[#717171] rounded-md py-1 px-[10px] ml-4 price-filter">
+          <span className="lg:text-2xl text-lg text-[#717171]">Sort By</span>
+          <select className="lg:text-2xl text-lg text-[#717171] border-2 border-[#717171] rounded-md py-1 px-[10px] ml-4 price-filter">
             {sortFilters.map((item, index) => (
-              <option key={index} className="text-xl text-[#717171]">
+              <option key={index} className=" lg:text-2xl text-lg text-[#717171]">
                 {item}
               </option>
             ))}
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
         {carDetails.map((item, index) => {
           return (
             <ProductCard
@@ -79,8 +79,8 @@ function ProductGridHome() {
           );
         })}
       </div>
-      <div className="flex justify-center w-full mt-12">
-        <button className="rounded-full bg-black text-white py-3 px-10 taviraj mt-6 text-xl">
+      <div className="flex justify-center w-full mt-5"> 
+        <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-lg">
           View All
         </button>
       </div>

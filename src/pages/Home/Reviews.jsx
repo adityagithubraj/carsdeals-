@@ -13,7 +13,7 @@ const ReviewCard = ({ img, name, review, star }) => {
   return (
     <div className="bg-[#CAFFAE] rounded-[20px] p-10 mx-3">
       <img src={img} alt={name} className="mx-auto"/>
-      <p className="text-center text-3xl my-4">{name}</p>
+      <p className="text-center text-xl my-4">{name}</p>
       <img src={star} alt="star" className="mx-auto mb-4"/>
       <p className="text-center text-xl">{review}</p>
     </div>
@@ -55,16 +55,31 @@ function Reviews() {
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      
+    ]
   };
 
   return (
-    <div className="container mx-auto pt-[6rem] review pb-[11rem]">
+    <div className="container mx-auto pt-[2rem] review pb-[11rem] px-5">
       <SectionHeading
         head="Hear it from our happy customers"
         subtext="Read what our delighted customers have to say"
       />
-      <Slider {...settings} className="mt-[5rem]">
+      <Slider {...settings} className="mt-[3rem]">
       {reviews.map((review, index) => {
         return (
           <ReviewCard

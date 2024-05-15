@@ -9,7 +9,7 @@ function Footer() {
     <div className="bg-[#000000] py-10">
       <div className="container mx-auto foot-container">
         <div>
-          <img src={logo} />
+          <img src={logo} className="mx-auto" />
         </div>
         <div className="flex justify-center flex-col items-center">
           <ul className="flex gap-x-14">

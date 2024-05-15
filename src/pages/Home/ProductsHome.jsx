@@ -4,7 +4,7 @@ import ProductGridHome from "./ProductGridHome";
 
 function ProductsHome() {
   return (
-    <div className="container mx-auto pt-[6rem]">
+    <div className="container mx-auto pt-[2rem] px-5">
       <SectionHeading
         head="Let's get started"
         subtext="Discover a wide range of new and pre-owned vehicles"
