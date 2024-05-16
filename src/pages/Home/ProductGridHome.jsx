@@ -42,20 +42,20 @@ function ProductGridHome() {
 
   return (
     <>
-      <div className="flex justify-end gap-x-10 my-10">
+      <div className="flex justify-end gap-x-4 md:gap-x-8 my-10">
         <div className="flex justify-center items-center">
-          <span className="lg:text-2xl text-lg  text-[#717171]">Filter</span>
+          <span className="lg:text-2xl text-md  text-[#717171]">Filter</span>
           <img
             src={filter}
-            className="ml-4 border-2 border-[#717171] rounded-md lg:py[8px] lg:px[12px] lg:py-[4px] px-[6px] cursor-pointer lg:w-[40px] w-[30px]"
+            className="ml-2 md:ml-4 border-2 border-[#717171] rounded-md  lg:px[13px] lg:py-[8px] p-[8px] cursor-pointer lg:w-[40px] w-[35px]"
             onClick={showModal}
           />
         </div>
-        <div className="flex justify-center items-center">
-          <span className="lg:text-2xl text-lg text-[#717171]">Sort By</span>
-          <select className="lg:text-2xl text-lg text-[#717171] border-2 border-[#717171] rounded-md py-1 px-[10px] ml-4 price-filter">
+        <div className="flex justify-center items-center gap-x-1 md:gap-x-5">
+          <span className="lg:text-2xl text-md text-[#717171]">Sort By</span>
+          <select className="lg:text-xl text-sm  text-[#717171] border-2 border-[#717171] rounded-md py-1 px-[5px]  price-filter">
             {sortFilters.map((item, index) => (
-              <option key={index} className=" lg:text-2xl text-lg text-[#717171]">
+              <option key={index} className=" lg:text-md text-lg text-[#717171]">
                 {item}
               </option>
             ))}
@@ -80,7 +80,7 @@ function ProductGridHome() {
         })}
       </div>
       <div className="flex justify-center w-full mt-5"> 
-        <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-lg">
+        <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
           View All
         </button>
       </div>

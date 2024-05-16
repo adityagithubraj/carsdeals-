@@ -2,12 +2,18 @@ import React from "react";
 import PageHeader from "../../components/PageHeader";
 import banner from "../../assets/PageBanner.png";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import { useEffect } from "react";
 
 function About() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <PageHeader imgSrc={banner} />
-      <div className="container mx-auto my-20">
+      <div className="container mx-auto px-5 my-10 md:my-20">
         <SectionHeading
           head="About the Company"
           subtext={
@@ -39,7 +45,7 @@ function About() {
           }
         />
       </div>
-      <div className="container mx-auto my-20">
+      <div className="container mx-auto px-5 my-10 md:my-20">
         <SectionHeading
           head="Our Roots"
           subtext={
@@ -57,7 +63,7 @@ function About() {
                 brand and leadership team, comprising the industry's top talent.
                 We've earned accolades from prestigious publications like The
                 Chicago Tribune, Built in Chicago, Chicago Innovation, and U.S.
-                News & World Report, solidifying our reputation as one of the
+                News &amp; World Report, solidifying our reputation as one of the
                 best places to work. Passion for innovation and commitment to
                 our people remain at the heart of our operations.
               </p>

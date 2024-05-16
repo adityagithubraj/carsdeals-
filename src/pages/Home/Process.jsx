@@ -8,17 +8,17 @@ const ProcessCard = ({ imgSrc, title, subtext }) => {
   return (
     <div className="flex justify-center flex-col items-center px-8 bg-[#CAFFAE] rounded-[40px] md:py-10 py-5 2xl:py-[4.5rem] md:my-0 my-3">
       <img src={imgSrc} className="w-24" />
-      <p className=" lg:text-3xl text-2xl my-3 text-center font-bold	">{title}</p>
-      <span className="text-center text-lg w-[90%] font-normal	">{subtext}</span>
+      <p className=" lg:text-3xl text-xl my-3 text-center font-bold	">{title}</p>
+      <span className="text-center text-md md:text-lg w-[90%] font-normal	">{subtext}</span>
     </div>
   );
 };
 
 function Process() {
   return (
-    <div className=" pt-[4rem] container mx-auto" id="process">
+    <div className=" pt-[4rem] container mx-auto px-5" id="process">
       <SectionHeading head="Process of buying used car" />
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 md:gap-y-10 py-10 px-5">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10 md:gap-y-10 md:py-10 ">
         <ProcessCard
           imgSrc={firstTag}
           title="Get price online"

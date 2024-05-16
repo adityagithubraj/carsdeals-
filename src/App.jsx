@@ -7,6 +7,10 @@ import Footer from "./components/Foot/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact/Contact";
 
+import Login from "./pages/Login_Signup/Login";
+import Signup from "./pages/Login_Signup/Signup";
+
+
 function App() {
   return (
     <>
@@ -15,7 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />}/>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
         <Footer />
       </BrowserRouter>

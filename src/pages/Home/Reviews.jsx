@@ -6,16 +6,16 @@ import "slick-carousel/slick/slick-theme.css";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import { reviews } from "../../constants/Reviews";
 import starImg from "../../assets/stars.png";
-import leftArrow from '../../assets/left.png'
-import rightArrow from '../../assets/right.png'
+import leftArrow from "../../assets/left.png";
+import rightArrow from "../../assets/right.png";
 
 const ReviewCard = ({ img, name, review, star }) => {
   return (
     <div className="bg-[#CAFFAE] rounded-[20px] p-10 mx-3">
-      <img src={img} alt={name} className="mx-auto"/>
-      <p className="text-center text-xl my-4">{name}</p>
-      <img src={star} alt="star" className="mx-auto mb-4"/>
-      <p className="text-center text-xl">{review}</p>
+      <img src={img} alt={name} className="mx-auto" />
+      <p className="text-center text-lg my-4 md:text-xl">{name}</p>
+      <img src={star} alt="star" className="mx-auto mb-4" />
+      <p className="text-center text-md md:text-lg">{review}</p>
     </div>
   );
 };
@@ -25,13 +25,13 @@ const SampleNextArrow = (props) => {
   return (
     <div
       className={`${className} custom-right-arrow`}
-      style={{ ...style, display: "block"}}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     >
-       <img src={rightArrow} alt="Next" />
-      </div>
+      <img src={rightArrow} alt="Next" />
+    </div>
   );
-}
+};
 
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
@@ -41,11 +41,10 @@ const SamplePrevArrow = (props) => {
       style={{ ...style, display: "block" }}
       onClick={onClick}
     >
-      <img src={leftArrow} alt="Next" className="w-20"/>
-      </div>
-      
+      <img src={leftArrow} alt="Next" className="w-20" />
+    </div>
   );
-}
+};
 
 function Reviews() {
   var settings = {
@@ -61,16 +60,15 @@ function Reviews() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-        }
+        },
       },
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-        }
+        },
       },
-      
-    ]
+    ],
   };
 
   return (
@@ -79,20 +77,21 @@ function Reviews() {
         head="Hear it from our happy customers"
         subtext="Read what our delighted customers have to say"
       />
-      <Slider {...settings} className="mt-[3rem]">
-      {reviews.map((review, index) => {
-        return (
-          <ReviewCard
-            key={index}
-            img={review.img}
-            name={review.name}
-            review={review.review}
-            star={starImg}
-          />
-        );
-      })}
-      </Slider>
-      
+      <div className="">
+        <Slider {...settings} className="mt-[3rem]">
+          {reviews.map((review, index) => {
+            return (
+              <ReviewCard
+                key={index}
+                img={review.img}
+                name={review.name}
+                review={review.review}
+                star={starImg}
+              />
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }
