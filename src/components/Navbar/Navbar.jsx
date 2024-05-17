@@ -4,15 +4,17 @@ import logo from "../../assets/cardeallogo.png";
 import { Link } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import { useEffect } from "react";
+
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <div className=" flex justify-between py-3 px-10  bg-black nav-outer">
+    <div className=" flex justify-between py-3 px-10  bg-black nav-outer	z-10">
       <div className="flex items-center">
-        <Link to='/'><img className="w-28" src={logo} alt="Logo" /></Link>
+        <Link to="/">
+          <img class="w-28" src={logo} alt="Logo" />
+        </Link>
       </div>
       <div className="flex justify-center items-center">
         <span

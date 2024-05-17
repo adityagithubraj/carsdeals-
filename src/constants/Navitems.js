@@ -20,6 +20,6 @@ export const navItems = [
     id: "4",
     title: "Log in/Sign up",
     icon: regIcon,
-    routeLink:'/',
+    routeLink:'/login',
   },
 ];

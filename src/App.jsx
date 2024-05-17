@@ -11,6 +11,10 @@ import Contact from "./pages/Contact/Contact";
 import ProductsPage from "./pages/Product/ProductsPage.jsx";
 import SingleProduct from "./pages/SingleProduct/SingleProduct.jsx";
 
+import Login from "./pages/Login_Signup/Login";
+import Signup from "./pages/Login_Signup/Signup";
+
+
 function App() {
   return (
     <>
@@ -22,6 +26,8 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
           <Route path="/products" element={<ProductsPage/>} />
           <Route path="/products/cars" element={<SingleProduct/>}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
         <Footer />
       </BrowserRouter>
