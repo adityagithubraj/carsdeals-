@@ -47,7 +47,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
           </ul>
         </fieldset>
         <fieldset className="my-3 md:my-5">
-          <label className="rufina text-base md:text-2xl font-bold	">Kms Driven</label>
+          <label className="rufina text-base md:text-2xl font-bold	">
+            Kms Driven
+          </label>
           <ul class="radioinput-list flex flex-wrap mt-2 md:mt-5 gap-x-1 gap-y-4 md:gap-x-3">
             {kmsDriven.map((km, index) => {
               return (
@@ -71,7 +73,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
           </ul>
         </fieldset>
         <fieldset className="my-3 md:my-5">
-          <label className="rufina text-base md:text-2xl font-bold	">Budget</label>
+          <label className="rufina text-base md:text-2xl font-bold	">
+            Budget
+          </label>
           <ul class="radioinput-list flex flex-wrap mt-2 md:mt-5 gap-x-1 gap-y-4 md:gap-x-3">
             {budget.map((item, index) => {
               return (
@@ -95,7 +99,9 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
           </ul>
         </fieldset>
         <fieldset className="my-3 md:my-5">
-          <label className="rufina text-base md:text-2xl font-bold	">Body Type</label>
+          <label className="rufina text-base md:text-2xl font-bold	">
+            Body Type
+          </label>
           <ul class="radioinput-list flex flex-wrap mt-2 md:mt-5 gap-x-1 gap-y-4 md:gap-x-3">
             {bodyTypes.map((type, index) => {
               return (
@@ -118,16 +124,6 @@ function FilterModal({ onFormSubmit, visibility, cancelHandler }) {
             })}
           </ul>
         </fieldset>
-        {/* <fieldset className="my-3 md:my-5">
-          <label className="rufina text-2xl font-bold	">Select Brand</label>{" "}
-          <br />
-          <select className="w-full text-xl border-2 rounded-sm mt-1" >
-            {brands.map((brand, index) => {
-              return <option key={index}>{brand} </option>;
-            })}
-          </select>
-        </fieldset> */}
-
         <Button
           type="primary"
           htmlType="submit"

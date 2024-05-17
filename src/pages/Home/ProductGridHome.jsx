@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import filter from "../../assets/filter.svg";
 import ProductCard from "../../components/ProductCard";
 import { carDetails } from "../../constants/CarDetails";
@@ -7,13 +6,6 @@ import FilterModal from "./FilterModal";
 
 function ProductGridHome() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const [formData, setFormData] = useState({
-  //   Initialize form data here
-  //   Example:
-  //   name: '',
-  //   email: '',
-  //   message: ''
-  // });
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -23,18 +15,8 @@ function ProductGridHome() {
     setIsModalOpen(false);
   };
 
-  // const handleFormChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     [name]: value,
-  //   }));
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // Example: sendFormData(formData);
     setIsModalOpen(false); // Close modal after form submission
   };
 
@@ -55,7 +37,10 @@ function ProductGridHome() {
           <span className="lg:text-2xl text-md text-[#717171]">Sort By</span>
           <select className="lg:text-xl text-sm  text-[#717171] border-2 border-[#717171] rounded-md py-1 px-[5px]  price-filter">
             {sortFilters.map((item, index) => (
-              <option key={index} className=" lg:text-md text-lg text-[#717171]">
+              <option
+                key={index}
+                className=" lg:text-md text-lg text-[#717171]"
+              >
                 {item}
               </option>
             ))}
@@ -79,13 +64,17 @@ function ProductGridHome() {
           );
         })}
       </div>
-      <div className="flex justify-center w-full mt-5"> 
+      <div className="flex justify-center w-full mt-5">
         <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
           View All
         </button>
       </div>
 
-      <FilterModal onFormSubmit={handleSubmit} visibility={isModalOpen} cancelHandler={handleCancel}/>
+      <FilterModal
+        onFormSubmit={handleSubmit}
+        visibility={isModalOpen}
+        cancelHandler={handleCancel}
+      />
     </>
   );
 }
