@@ -29,7 +29,6 @@ function ProductCard({
         <div>
           <p className="text-[#3C3C3C] font-semibold text-sm md:text-base taviraj text-center ">
             Reg. Year
-          </p>{" "}
           <p className="text-black text-center text-sm md:text-base font-semibold taviraj	">
             {regYear}
           </p>
@@ -37,15 +36,15 @@ function ProductCard({
         <div>
           <p className="text-[#3C3C3C] font-semibold text-sm md:text-base taviraj text-center ">
             Kms
-          </p>{" "}
+          </p>
           <p className="text-black text-center text-sm md:text-base font-semibold taviraj	">
             {kms}
           </p>
         </div>
         <div>
           <p className="text-[#3C3C3C] font-semibold text-sm md:text-base taviraj text-center ">
-            Fuel Type{" "}
-          </p>{" "}
+            Fuel Type
+          </p>
           <p className="text-black text-center text-sm md:text-base font-semibold taviraj	">
             {fuelType}
           </p>
@@ -53,7 +52,7 @@ function ProductCard({
         <div>
           <p className="text-[#3C3C3C] font-semibold text-sm md:text-base taviraj text-center ">
             Reg. State
-          </p>{" "}
+          </p>
           <p className="text-black text-center text-sm md:text-base font-semibold taviraj	">
             {regState}
           </p>
