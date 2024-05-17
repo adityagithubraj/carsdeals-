@@ -118,6 +118,15 @@ input.filter[type="radio"]:checked + label {
   animation: bounce-animation 1.6s infinite;
 }
 
+.reserve-modal-outer {
+  @media only screen and (max-width: 500px) {
+    height: 90%;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+  }
+}
+
 // ends
 .filter-modal {
   .ant-modal-content {

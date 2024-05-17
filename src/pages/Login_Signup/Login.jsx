@@ -9,11 +9,28 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import ReserveModal from "../../components/ReserveModal";
 
 function Login() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsModalOpen(false); // Close modal after form submission
+  };
+
   const navigate = useNavigate();
   const notify = () => toast.success("You Logged In To Your Account !!!");
 
@@ -81,6 +98,13 @@ function Login() {
           <ToastContainer autoClose={1500} />
         </div>
       </div>
+      <button onClick={showModal}>click</button>
+
+      <ReserveModal
+        onFormSubmit={handleSubmit}
+        visibility={isModalOpen}
+        cancelHandler={handleCancel}
+      />
     </>
   );
 }
