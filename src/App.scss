@@ -123,13 +123,32 @@ input.filter[type="radio"]:checked + label {
   animation: bounce-animation 1.6s infinite;
 }
 
-.reserve-modal-outer {
+.green-icon{
+  background-color: red;
+  padding: 20px;
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.reserve-modal-outer{
   @media only screen and (max-width: 500px) {
     height: 90%;
     overflow: hidden;
     overflow-y: scroll;
     border-radius: 10px;
   }
+}
+
+.car-reserve{
+
+  @media only screen and (max-width:768px){
+    width: 100% !important;
+    height: 90%;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+  }
+
 }
 
 // ends
