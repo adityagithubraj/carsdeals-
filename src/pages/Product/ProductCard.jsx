@@ -1,12 +1,13 @@
 
-const ProductCard = ({imgSrc,carName,carPrice,emiStart,regYear,kms,fuelType,regState})=>{
+const ProductCard = ({imgSrc,carName,carPrice,emiStart,regYear,kms,fuelType,regState,modalSize})=>{
   return (
-    <div className={`bg-[#F3F3F3] rounded-[20px] transition-transform duration-200 
-                    transform ease-in-out hover:scale-105 p-4 h-min-fit my-5`}>
-      <div className="">
+    <div className={`bg-[#F3F3F3] rounded-[20px] 
+                    ${ modalSize ? `py-0 my-0 h-[60vw] w-[100%] ` : `p-4 my-5 transition-transform duration-200 
+                    transform ease-in-out hover:scale-105` }`}>
+      <div>
         <img 
           src={imgSrc}
-          className="rounded-[20px]"
+          className={`rounded-[20px] ${ modalSize ? `mx-auto` : "" }`}
         />
         <div className="p-5">
           <button className="rounded-full bg-black w-full text-white p-3 taviraj mt-6 text-xl	">{carPrice}</button>

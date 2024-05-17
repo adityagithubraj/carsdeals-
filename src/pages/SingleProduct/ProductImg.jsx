@@ -3,60 +3,74 @@ import { singleCarImage } from '../../constants/SingleCarImage'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import leftArrow from '../../assets/left.png'
+import rightArrow from '../../assets/right.png'
 
 
 const ProductImg = () => {
 
+  const SampleNextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} custom-right-arrow`}
+        style={{ ...style, display: "block"}}
+        onClick={onClick}
+      >
+         <img src={rightArrow} alt="Next" />
+        </div>
+    );
+  }
+  
+  const SamplePrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={`${className} custom-left-arrow`}
+        style={{ ...style, display: "block" }}
+        onClick={onClick}
+      >
+        <img src={leftArrow} alt="Next" className="w-20"/>
+        </div>
+        
+    );
+  }
+  
+
   const settings = {
-    // dots: false,
-    // infinite: true,
-    // speed: 500,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
-    // centerMode: true,
-    // centerPadding: '25%',
-    // autoplay: true,
-    // autoplaySpeed: 3000,
-    // speed: 500,
-    dots: true,
+    className: "center",
+    centerMode: true,
     infinite: true,
-    speed: 500,
+    centerPadding: "25%",
     slidesToShow: 1,
-    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    speed: 500,
     responsive: [
+
       {
         breakpoint: 768,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
+          centerMode: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
         }
       },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
     ]
   };
-
   return (
-    <div className='container mx-auto'>
-
-    <Slider {...settings}>
-      {singleCarImage.map((item, index) => (
-        <div key={index}>
-          <img src={item} alt="" className='h-[40vh]'/>
+    <div className="slider-container pt-16">
+      <Slider {...settings}>
+        {singleCarImage.map((item, index) => (
+          <div className='px-2'>
+          <h3>
+            <img src={singleCarImage[index]} className='w-[100%] rounded-2xl' alt="" />
+          </h3>
         </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
     </div>
-
   )
 }
 
