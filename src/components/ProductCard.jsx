@@ -28,7 +28,8 @@ function ProductCard({
       <div className="p-2 md:p-5 flex justify-evenly">
         <div>
           <p className="text-[#3C3C3C] font-semibold text-sm md:text-base taviraj text-center ">
-            Reg. Year
+            Reg. Year{" "}
+          </p>
           <p className="text-black text-center text-sm md:text-base font-semibold taviraj	">
             {regYear}
           </p>

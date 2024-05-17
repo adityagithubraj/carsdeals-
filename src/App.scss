@@ -23,16 +23,15 @@ body {
   }
 }
 
-.secondary-color{
+.secondary-color {
   // color: #CAFFAE;
-  background-color: #CAFFAE;
+  background-color: #caffae;
 }
 
 .foot-container {
   display: grid;
   grid-template-columns: 20% 60% 20%;
 
- 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
     row-gap: 30px;

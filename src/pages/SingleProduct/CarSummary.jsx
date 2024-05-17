@@ -13,12 +13,6 @@ const CarSummary = ({ icon, title, desc }) => {
       </div>
     </div>
   
-    // <div className='rounded-lg border-2 border-solid border-[#CAFFAE] p-10'>
-    //   <img src={icon} alt="" className='mx-auto bg-[#CAFFAE] p-3 rounded-full' />
-    //   <p className='text-center'>{title}</p>
-    //   <span className='mx-auto'>{desc}</span>
-    // </div>
-  
   )
 }
 
