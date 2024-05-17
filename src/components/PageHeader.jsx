@@ -1,8 +1,10 @@
 import React from 'react'
 
-function PageHeader() {
+function PageHeader({imgSrc}) {
   return (
-    <div>PageHeader</div>
+    <div className=''>
+      <img src={imgSrc} className='w-full'/>
+    </div>
   )
 }
 

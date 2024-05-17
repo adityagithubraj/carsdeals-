@@ -1,7 +1,8 @@
 export const footItems = [
     {
         id:'1',
-        text:'About Us'
+        text:'About Us',
+        routeLink:'/about'
     }, 
     {
         id:'2',
