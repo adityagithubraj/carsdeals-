@@ -18,9 +18,9 @@ body {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
 }
-ul.navigation-ul li a{
-  @media only screen and (max-width:768px){
-    color: #FFF !important;
+ul.navigation-ul li a {
+  @media only screen and (max-width: 768px) {
+    color: #fff !important;
   }
 }
 .home-banner {
@@ -39,7 +39,8 @@ ul.navigation-ul li a{
   background-color: #caffae;
 }
 
-.slick-prev:before , .slick-next:before{
+.slick-prev:before,
+.slick-next:before {
   display: none;
 }
 
@@ -61,7 +62,7 @@ ul.navigation-ul li a{
 .custom-right-arrow {
   position: absolute !important;
   top: 100% !important;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 .custom-left-arrow {
   left: 44% !important;
@@ -116,7 +117,7 @@ input.filter[type="radio"]:checked + label {
   input:focus ~ label,
   input:valid ~ label {
     font-size: 14px;
-    top: -24px;
+    top: -30px;
     color: #000;
   }
 }
@@ -210,7 +211,7 @@ input.filter[type="radio"]:checked + label {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .ham-icon {
     display: none;
   }

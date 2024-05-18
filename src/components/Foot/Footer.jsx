@@ -23,7 +23,7 @@ function Footer() {
               </li>
             ))}
           </ul>
-          <p className="text-[#8A8A8A] mt-5 text-sm">
+          <p className="text-[#8A8A8A] mt-5 text-sm text-center">
             ® {copyrightYear} www.carsdeal.com All Rights Reserved
           </p>
         </div>
