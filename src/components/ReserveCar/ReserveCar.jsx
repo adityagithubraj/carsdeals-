@@ -1,12 +1,9 @@
 import React from "react";
-
-// import ProductCard from '../../pages/Product/ProductCard.jsx';
 import ProductCard from '../../components/ProductCard'
 import { carDetails } from "../../constants/CarDetails.js";
 import { Modal, Button } from "antd";
 
 const ReserveCar = ({ isModalOpen, closeModal }) => {
-  const modalSize = true;
   const modalData = [
     "Pay 2 Lacs & Reserve Car for 24 hours",
     "Pay 10% & get confirmed booking",
@@ -25,7 +22,7 @@ const ReserveCar = ({ isModalOpen, closeModal }) => {
       >
         <section>
           <div className="grid md:grid-cols-2 gap-x-10">
-            <div className="mx-auto ">
+            <div className="mx-auto">
               {carDetails.slice(0, 1).map((item, index) => {
                 return (
                   <ProductCard
@@ -39,21 +36,19 @@ const ReserveCar = ({ isModalOpen, closeModal }) => {
                     kms={item.kms}
                     fuelType={item.fuelType}
                     regState={item.regState}
-                    modalSize={modalSize}
                   />
                 );
               })}
             </div>
-            <div className="my-5  px-0 md:px-5 mx-auto lg:my-0">
+            <div className="my-14 px-0 md:px-5 mx-auto md:my-0 w-full">
               <h3 className={` sm:text-xl md:text-2xl font-bold taviraj w-full `}>
                 Please Select How you would like to reserve your car.
               </h3>
-
               <div>
                 {modalData.map((text, index) => (
-                  <div className="bg-[#CAFFAE] rounded-2xl mx-auto xl:my-11 my-2 w-full">
+                  <div className="bg-[#CAFFAE] rounded-2xl xl:my-11 lg:my-6 md:my-4 my-6 w-full">
                     <button
-                      className={`text-md md:text-lg xl:p-5 md:p-4 font-bold taviraj`}
+                      className={`text-md md:text-lg xl:p-5 md:p-3 p-5 font-bold taviraj`}
                     >
                       {text}
                     </button>

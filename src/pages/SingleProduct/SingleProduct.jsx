@@ -64,7 +64,7 @@ const SingleProduct = () => {
       <section className="container mx-auto px-5 my-24">
         <div>
           <SectionHeading head="Car Summary" start={true} carSum={true} />
-          <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 md:gap-10 gap-4 mx-auto pb-5 mt-10">
+          <div className="grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 md:gap-10 gap-4 mx-auto pb-5 mt-10">
             {carSummary.map((item, index) => (
               <div key={index} className="flex justify-center">
                 <CarSummary
@@ -82,12 +82,11 @@ const SingleProduct = () => {
         <SectionHeading head="Full Specifications" start={true} />
         <div className="mt-10">
           {carSpecifications.map((item, index) => (
-            <div key={index} className="my-4">
               <Accordion
+                key={index}
                 accordionTitle={item.accordionText}
                 accordionDesc={item.accordionDesc}
               />
-            </div>
           ))}
         </div>
       </section>
