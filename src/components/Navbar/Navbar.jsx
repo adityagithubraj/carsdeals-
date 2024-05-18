@@ -38,7 +38,7 @@ function Navbar() {
           onClick={() => setShowMenu(!showMenu)}
           className="cursor-pointer ham-icon"
         >
-          <MenuOutlined style={{ color: "white" }} />
+          <MenuOutlined style={{ color: "black" }} />
         </span>
 
         <ul className={`flex navigation-ul ${showMenu ? "show" : ""}`}>

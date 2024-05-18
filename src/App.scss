@@ -18,7 +18,11 @@ body {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(10px);
 }
-
+ul.navigation-ul li a{
+  @media only screen and (max-width:768px){
+    color: #FFF !important;
+  }
+}
 .home-banner {
   background-image: url("./assets/banner.png");
   background-size: cover;
