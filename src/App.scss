@@ -12,6 +12,17 @@ body {
 .nav-item {
   cursor: pointer;
 }
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+}
+ul.navigation-ul li a{
+  @media only screen and (max-width:768px){
+    color: #FFF !important;
+  }
+}
 .home-banner {
   background-image: url("./assets/banner.png");
   background-size: cover;
@@ -127,14 +138,14 @@ input.filter[type="radio"]:checked + label {
   animation: bounce-animation 1.6s infinite;
 }
 
-.green-icon{
+.green-icon {
   background-color: red;
   padding: 20px;
   border-radius: 100%;
   display: inline-block;
 }
 
-.reserve-modal-outer{
+.reserve-modal-outer {
   @media only screen and (max-width: 500px) {
     height: 90%;
     overflow: hidden;
@@ -143,16 +154,14 @@ input.filter[type="radio"]:checked + label {
   }
 }
 
-.car-reserve{
-
-  @media only screen and (max-width:768px){
+.car-reserve {
+  @media only screen and (max-width: 768px) {
     width: 100% !important;
     height: 90%;
     overflow: hidden;
     overflow-y: scroll;
     border-radius: 10px;
   }
-
 }
 
 // ends
