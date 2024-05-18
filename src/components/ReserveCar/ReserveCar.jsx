@@ -1,9 +1,10 @@
 import React from "react";
-import ProductCard from '../../components/ProductCard'
+import ProductCard from "../../components/ProductCard";
 import { carDetails } from "../../constants/CarDetails.js";
-import { Modal, Button } from "antd";
+import { Modal } from "antd";
+import ReserveModal from "../ReserveModal";
 
-const ReserveCar = ({ isModalOpen, closeModal }) => {
+const ReserveCar = ({ isModalOpen, closeModal , btnSubmit }) => {
   const modalData = [
     "Pay 2 Lacs & Reserve Car for 24 hours",
     "Pay 10% & get confirmed booking",
@@ -41,7 +42,9 @@ const ReserveCar = ({ isModalOpen, closeModal }) => {
               })}
             </div>
             <div className="my-14 px-0 md:px-5 mx-auto md:my-0 w-full">
-              <h3 className={` sm:text-xl md:text-2xl font-bold taviraj w-full `}>
+              <h3
+                className={` sm:text-xl md:text-2xl font-bold taviraj w-full `}
+              >
                 Please Select How you would like to reserve your car.
               </h3>
               <div>
@@ -56,14 +59,18 @@ const ReserveCar = ({ isModalOpen, closeModal }) => {
                 ))}
               </div>
               <div className="text-center">
-              <button type='submit' className="rounded-full bg-black text-white py-1 px-7 taviraj mt-2 md:mt-6 text-md md:text-lg md:py-2 ">
-          Reserve this car
-        </button>
+                <button
+                  onClick={ btnSubmit }
+                  className="rounded-full bg-black text-white py-1 px-7 taviraj mt-2 md:mt-6 text-md md:text-lg md:py-2 "
+                >
+                  Reserve this car
+                </button>
               </div>
             </div>
           </div>
         </section>
       </Modal>
+      <ReserveModal />
     </div>
   );
 };

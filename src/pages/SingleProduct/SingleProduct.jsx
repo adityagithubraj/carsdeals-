@@ -10,9 +10,17 @@ import Accordion from "../../components/Accordion/Accordion";
 import ProductCard from "../../components/ProductCard";
 import ReserveCar from "../../components/ReserveCar/ReserveCar";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
+import ReserveModal from "../../components/ReserveModal";
+import { useEffect } from "react";
+
 
 const SingleProduct = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [finalModalVisibility, setFinalModalVisibility] = useState(false);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -20,6 +28,16 @@ const SingleProduct = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const finalModalClose = () => {
+    setFinalModalVisibility(false);
+  };
+
+  const buttonClose = () => {
+    setIsModalOpen(false);
+    setFinalModalVisibility(true);
+    console.log(finalModalVisibility);
   };
 
   return (
@@ -82,11 +100,11 @@ const SingleProduct = () => {
         <SectionHeading head="Full Specifications" start={true} />
         <div className="mt-10">
           {carSpecifications.map((item, index) => (
-              <Accordion
-                key={index}
-                accordionTitle={item.accordionText}
-                accordionDesc={item.accordionDesc}
-              />
+            <Accordion
+              key={index}
+              accordionTitle={item.accordionText}
+              accordionDesc={item.accordionDesc}
+            />
           ))}
         </div>
       </section>
@@ -114,7 +132,17 @@ const SingleProduct = () => {
         </div>
       </section>
       {isModalOpen && (
-        <ReserveCar isModalOpen={isModalOpen} closeModal={closeModal} />
+        <ReserveCar
+          isModalOpen={isModalOpen}
+          closeModal={closeModal}
+          btnSubmit={buttonClose}
+        />
+      )}
+      {finalModalVisibility && (
+        <ReserveModal
+          visibility={finalModalVisibility}
+          cancelHandler={finalModalClose}
+        />
       )}
     </div>
   );

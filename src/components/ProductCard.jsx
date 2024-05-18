@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard({
   imgSrc,
@@ -14,9 +15,11 @@ function ProductCard({
     <div className="bg-[#F3F3F3] rounded-[20px]">
       <div className="p-2 md:p-5">
         <img src={imgSrc} className="rounded-[20px]" />
-        <button class="rounded-full bg-black w-full text-white p-2 taviraj mt-6 text-md	md:text-lg">
-          {carPrice}
-        </button>
+        <Link to='/products/cars'>
+          <button class="rounded-full bg-black w-full text-white p-2 taviraj mt-6 text-md	md:text-lg">
+            {carPrice}
+          </button>
+        </Link>
         <h3 className="text-center font-bold text-lg md:text-xl taviraj mt-5 md:mt-5  mb-2 taviraj">
           {carName}
         </h3>

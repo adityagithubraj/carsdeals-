@@ -14,7 +14,6 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY >= top_offset) {
         setChangeBg(true);
       } else {
