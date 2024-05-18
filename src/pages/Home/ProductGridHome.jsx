@@ -39,7 +39,7 @@ function ProductGridHome() {
             {sortFilters.map((item, index) => (
               <option
                 key={index}
-                className=" lg:text-md text-lg text-[#717171]"
+                className=" lg:text-xl text-sm text-[#717171]"
               >
                 {item}
               </option>

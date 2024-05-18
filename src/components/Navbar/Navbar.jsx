@@ -14,7 +14,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY)
+      console.log(window.scrollY);
       if (window.scrollY >= top_offset) {
         setChangeBg(true);
       } else {
@@ -26,11 +26,17 @@ function Navbar() {
 
   return (
     <div
-      className={`flex justify-between py-3 px-10  ${changeBg ? "glass-effect" : "bg-black"}  nav-outer	z-10`}>
+      className={`flex justify-between py-3 px-10  ${
+        changeBg ? "glass-effect" : "bg-black"
+      }  nav-outer	z-10`}
+    >
       <div className="flex items-center">
         <Link to="/">
-          {!changeBg && <img className="w-28" src={logo} alt="Logo" />}
-          {changeBg && <img className="w-28" src={darkLogo} alt="dlogo" />}
+          {changeBg ? (
+            <img className="w-28" src={darkLogo} alt="dlogo" />
+          ) : (
+            <img className="w-28" src={logo} alt="Logo" />
+          )}
         </Link>
       </div>
       <div className="flex justify-center items-center">
@@ -38,7 +44,11 @@ function Navbar() {
           onClick={() => setShowMenu(!showMenu)}
           className="cursor-pointer ham-icon"
         >
-          <MenuOutlined style={{ color: "black" }} />
+          {changeBg ? (
+            <MenuOutlined style={{ color: "black" }} />
+          ) : (
+            <MenuOutlined style={{ color: "white" }} />
+          )}
         </span>
 
         <ul className={`flex navigation-ul ${showMenu ? "show" : ""}`}>
