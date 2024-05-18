@@ -11,7 +11,6 @@ import ProductCard from "../../components/ProductCard";
 import ReserveCar from "../../components/ReserveCar/ReserveCar";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 
-// showing single cars , so all the data will be pre linked with the car is being displayed , which will be taken by the car id
 const SingleProduct = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,19 +33,19 @@ const SingleProduct = () => {
               key={index}
               className={`flex lg:flex-row flex-col flex-wrap gap-x-4 justify-between items-center text-center mx-auto`}
             >
-              <p className="text-center font-bold text-xl taviraj mt-8 lg:mt-5  mb-2 taviraj">
+              <p className="text-center font-bold text-xl taviraj mt-6 lg:mt-5  mb-2 taviraj">
                 {item.cname}
               </p>
-              <span className="hidden lg:block font-bold mt-8 md:mt-2 text-4xl">
+              <span className="hidden lg:block font-bold mt-4 md:mt-2 text-4xl">
                 |
               </span>
-              <p className="text-center font-bold text-xl taviraj mt-8 lg:mt-5  mb-2 taviraj">
+              <p className="text-center font-bold text-xl taviraj mt-2 lg:mt-5  mb-2 taviraj">
                 {item.carPrice}
               </p>
-              <span className="hidden lg:block  font-bold mt-8 md:mt-2 text-4xl">
+              <span className="hidden lg:block  font-bold mt-4 md:mt-2 text-4xl">
                 |
               </span>
-              <p className="mt-8 mb-2 lg:mt-5 text-2xl mx-5">
+              <p className="mt-2 mb-2 lg:mt-5 text-2xl mx-5">
                 EMI Starts &#x40; {item.emiStartAmnt}
               </p>
             </div>
@@ -62,10 +61,9 @@ const SingleProduct = () => {
         </div>
       </div>
 
-      <section className="container mx-auto px-5">
-        <div className="my-10">
-          <SectionHeading head="Car Summary" />
-          {/* double loop one to ensure that car have that property and second inside to pass in the data and display the content  */}
+      <section className="container mx-auto px-5 my-24">
+        <div>
+          <SectionHeading head="Car Summary" start={true} carSum={true} />
           <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 md:gap-10 gap-4 mx-auto pb-5 mt-10">
             {carSummary.map((item, index) => (
               <div key={index} className="flex justify-center">
@@ -80,9 +78,9 @@ const SingleProduct = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-5">
-        <SectionHeading head="Full Specifications" />
-        <div className="faq mt-10 ">
+      <section className="container mx-auto px-5 my-24">
+        <SectionHeading head="Full Specifications" start={true} />
+        <div className="mt-10">
           {carSpecifications.map((item, index) => (
             <div key={index} className="my-4">
               <Accordion
@@ -94,9 +92,9 @@ const SingleProduct = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-5">
-        <div className="mb-24 my-20 ">
-          <SectionHeading head="Related Cars" />
+      <section className="container mx-auto px-5 my-24">
+        <div className="mb-24">
+          <SectionHeading head="Related Cars" start={true} />
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
             {carDetails.slice(0, 6).map((item, index) => {
               return (
