@@ -16,31 +16,27 @@ export const carSpecifications = [
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
+        accordionText : "Seats & Upholstery",
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
+        accordionText : "Entertainment Front",
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
+        accordionText : "Suspension, Brakes, Wheels & Tyres",
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
+        accordionText : "Dimensions, Weight, Storage, Capacity",
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
+        accordionText : "Warranty & Service Package",
         accordionDesc : "This is the answer to your question",
     },
     {
-        accordionText : "Some More Question",
-        accordionDesc : "This is the answer to your question",
-    },
-    {
-        accordionText : "Some More Question",
+        accordionText : "Exterior Colours",
         accordionDesc : "This is the answer to your question",
     },
 ]
