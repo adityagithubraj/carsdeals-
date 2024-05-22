@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import filter from "../../assets/filter.svg";
 import ProductCard from "../../components/ProductCard";
 import { carDetails } from "../../constants/CarDetails";
 import FilterModal from "./FilterModal";
 
 function ProductGridHome() {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -19,6 +20,11 @@ function ProductGridHome() {
     e.preventDefault();
     setIsModalOpen(false); // Close modal after form submission
   };
+
+  const handleCarIdSet = (id)=>{
+    setCarId(id);
+    console.log(carId)
+  }
 
   const sortFilters = ["Price Low to High", "Price High to Low", "Price"];
 
@@ -52,6 +58,7 @@ function ProductGridHome() {
           return (
             <ProductCard
               key={index}
+              id={item?.carId}
               imgSrc={item.img}
               carName={item.cname}
               carPrice={item.carPrice}

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CarContext } from "../context/CarContext";
 
 function ProductCard({
+  id,
   imgSrc,
   carName,
   carPrice,
@@ -11,12 +13,13 @@ function ProductCard({
   fuelType,
   regState,
 }) {
+
   return (
     <div className="bg-[#F3F3F3] rounded-[20px]">
       <div className="p-2 md:p-5">
         <img src={imgSrc} className="rounded-[20px]" />
-        <Link to='/products/cars'>
-          <button class="rounded-full bg-black w-full text-white p-2 taviraj mt-6 text-md	md:text-lg">
+        <Link to={`/products/car/${id}`}>
+          <button className="rounded-full bg-black w-full text-white p-2 taviraj mt-6 text-md	md:text-lg" >
             {carPrice}
           </button>
         </Link>

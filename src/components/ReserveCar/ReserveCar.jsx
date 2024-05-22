@@ -4,7 +4,7 @@ import { carDetails } from "../../constants/CarDetails.js";
 import { Modal } from "antd";
 import ReserveModal from "../ReserveModal";
 
-const ReserveCar = ({ isModalOpen, closeModal , btnSubmit }) => {
+const ReserveCar = ({ isModalOpen, closeModal , btnSubmit , car }) => {
   const modalData = [
     "Pay 2 Lacs & Reserve Car for 24 hours",
     "Pay 10% & get confirmed booking",
@@ -24,22 +24,18 @@ const ReserveCar = ({ isModalOpen, closeModal , btnSubmit }) => {
         <section>
           <div className="grid md:grid-cols-2 gap-x-10">
             <div className="mx-auto">
-              {carDetails.slice(0, 1).map((item, index) => {
-                return (
                   <ProductCard
-                    key={index}
                     className="rounded-[20px]"
-                    imgSrc={item.img}
-                    carName={item.cname}
-                    carPrice={item.carPrice}
-                    emiStart={item.emiStartAmnt}
-                    regYear={item.regYear}
-                    kms={item.kms}
-                    fuelType={item.fuelType}
-                    regState={item.regState}
+                    id={car?.carId}
+                    imgSrc={car.img}
+                    carName={car.cname}
+                    carPrice={car.carPrice}
+                    emiStart={car.emiStartAmnt}
+                    regYear={car.regYear}
+                    kms={car.kms}
+                    fuelType={car.fuelType}
+                    regState={car.regState}
                   />
-                );
-              })}
             </div>
             <div className="my-14 px-0 md:px-5 mx-auto md:my-0 w-full">
               <h3
@@ -49,7 +45,7 @@ const ReserveCar = ({ isModalOpen, closeModal , btnSubmit }) => {
               </h3>
               <div>
                 {modalData.map((text, index) => (
-                  <div className="bg-[#CAFFAE] rounded-2xl xl:my-11 lg:my-6 md:my-4 my-6 w-full">
+                  <div className="bg-[#CAFFAE] rounded-2xl xl:my-11 lg:my-6 md:my-4 my-6 w-full" key={index}>
                     <button
                       className={`text-md md:text-lg xl:p-5 md:p-3 p-5 font-bold taviraj`}
                     >
