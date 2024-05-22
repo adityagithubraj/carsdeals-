@@ -59,14 +59,14 @@ function ProductGridHome() {
             <ProductCard
               key={index}
               id={item?.carId}
-              imgSrc={item.img}
-              carName={item.cname}
-              carPrice={item.carPrice}
-              emiStart={item.emiStartAmnt}
-              regYear={item.regYear}
-              kms={item.kms}
-              fuelType={item.fuelType}
-              regState={item.regState}
+              imgSrc={item?.img}
+              carName={item?.cname}
+              carPrice={item?.carPrice}
+              emiStart={item?.emiStartAmnt}
+              regYear={item?.regYear}
+              kms={item?.kms}
+              fuelType={item?.fuelType}
+              regState={item?.regState}
             />
           );
         })}

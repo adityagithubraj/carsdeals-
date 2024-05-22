@@ -17,7 +17,9 @@ import { carDetails } from "../../constants/CarDetails";
 import { useParams } from "react-router";
 
 const SingleProduct = () => {
+
   const { carDetail, setParamsId } = useContext(CarContext);
+  const fetchedUrl = window.location.href;
 
   // needs to be fixed better
   const { id: paramsId } = useParams();
@@ -25,8 +27,7 @@ const SingleProduct = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     setParamsId(paramsId);
-
-  }, []);
+  }, [fetchedUrl]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [finalModalVisibility, setFinalModalVisibility] = useState(false);
@@ -125,14 +126,14 @@ const SingleProduct = () => {
                 <ProductCard
                   key={index}
                   id={item?.carId}
-                  imgSrc={item.img}
-                  carName={item.cname}
-                  carPrice={item.carPrice}
-                  emiStart={item.emiStartAmnt}
-                  regYear={item.regYear}
-                  kms={item.kms}
-                  fuelType={item.fuelType}
-                  regState={item.regState}
+                  imgSrc={item?.img}
+                  carName={item?.cname}
+                  carPrice={item?.carPrice}
+                  emiStart={item?.emiStartAmnt}
+                  regYear={item?.regYear}
+                  kms={item?.kms}
+                  fuelType={item?.fuelType}
+                  regState={item?.regState}
                 />
               );
             })}
