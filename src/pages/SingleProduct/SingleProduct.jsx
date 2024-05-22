@@ -18,10 +18,8 @@ import { useParams } from "react-router";
 
 const SingleProduct = () => {
 
-  const { carDetail, setParamsId } = useContext(CarContext);
   const fetchedUrl = window.location.href;
-
-  // needs to be fixed better
+  const { carDetail, setParamsId } = useContext(CarContext);
   const { id: paramsId } = useParams();
 
   useEffect(() => {

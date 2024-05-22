@@ -18,7 +18,7 @@ function ProductGridHome() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsModalOpen(false); // Close modal after form submission
+    setIsModalOpen(false);
   };
 
   const handleCarIdSet = (id)=>{

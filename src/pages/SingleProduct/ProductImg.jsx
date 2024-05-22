@@ -14,14 +14,14 @@ const ProductImg = () => {
     return (
       <div
         className={`${className} custom-right-arrow`}
-        style={{ ...style, display: "block"}}
+        style={{ ...style, display: "block" }}
         onClick={onClick}
       >
-         <img src={rightArrow} alt="Next" />
-        </div>
+        <img src={rightArrow} alt="Next" />
+      </div>
     );
   }
-  
+
   const SamplePrevArrow = (props) => {
     const { className, style, onClick } = props;
     return (
@@ -30,12 +30,12 @@ const ProductImg = () => {
         style={{ ...style, display: "block" }}
         onClick={onClick}
       >
-        <img src={leftArrow} alt="Next" className="w-20"/>
-        </div>
-        
+        <img src={leftArrow} alt="Next" className="w-20" />
+      </div>
+
     );
   }
-  
+
 
   const settings = {
     className: "center",
@@ -64,10 +64,10 @@ const ProductImg = () => {
       <Slider {...settings}>
         {singleCarImage.map((item, index) => (
           <div className='px-2' key={index}>
-          <h3>
-            <img src={singleCarImage[index]} className='w-[100%] rounded-2xl' alt="" />
-          </h3>
-        </div>
+            <h3>
+              <img src={singleCarImage[index]} className='w-[100%] rounded-2xl' alt="" />
+            </h3>
+          </div>
         ))}
       </Slider>
     </div>
