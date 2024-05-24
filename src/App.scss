@@ -206,13 +206,18 @@ input.filter[type="radio"]:checked + label {
   left: 0px !important;
 }
 @media only screen and (max-width: 768px) {
-
+  .page-banner{
+    margin-top:58px;
+  }
   .banner-txt h1 br , img.desk-profile{
     display: none;
   }
 }
 
 @media only screen and (min-width: 769px) {
+  .page-banner{
+    margin-top:82px;
+  }
   .ham-icon , img.mobile-pro-icon{
     display: none;
   }
