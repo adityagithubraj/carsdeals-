@@ -10,7 +10,6 @@ function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    // Close the menu when the URL changes
     setShowMenu(false);
   }, [location]);
 
