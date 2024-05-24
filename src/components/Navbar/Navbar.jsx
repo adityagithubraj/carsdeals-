@@ -8,12 +8,14 @@ import darkLogo from "../../assets/black-logo.png";
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
-  const top_offset = 500;
+  const mobile_offset = 100;
+  const desktop_offset = 790;
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= top_offset) {
+      const offset = window.innerWidth < 768 ? mobile_offset : desktop_offset; 
+      if (window.scrollY >= offset) {
         setChangeBg(true);
       } else {
         setChangeBg(false);
