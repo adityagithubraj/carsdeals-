@@ -13,7 +13,7 @@ function HomeBanner() {
 
   return (
     <>
-      <div className="home-banner p-10 flex flex-col justify-between">
+      <div className="home-banner p-10 flex flex-col justify-between pt-[6rem]">
         <div className="flex flex-col justify-center md:items-baseline items-center gap-y-8 banner-txt">
           <h1 className="text-white xl:text-8xl lg:text-6xl lg:leading-[5rem] text-[30px] text-center md:text-left ">
             Experience the thrill <br />

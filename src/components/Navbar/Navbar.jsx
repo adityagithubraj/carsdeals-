@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <div
-      className={`flex justify-between py-3 px-10  ${
+      className={`fixed w-[100%] flex justify-between py-3 px-10  ${
         changeBg ? "glass-effect" : "bg-black"
       }  nav-outer	z-10`}
     >
@@ -53,16 +53,16 @@ function Navbar() {
         <ul className={`flex navigation-ul ${showMenu ? "show" : ""}`}>
           {navItems.map((item) => (
             <li
-              className={`nav-item px-3 ${
+              className={`nav-item px-3  ${
                 changeBg ? "text-black" : "text-white"
               }  flex justify-center items-center text-xl`}
               key={item.id}
             >
               <Link to={item.routeLink} className="flex items-center">
                 {item.title}
-                {item.icon && (
-                  <img className="w-8 pl-2" src={item.icon} alt={item.title} />
-                )}
+                {item.icon && (<img className="w-8 pl-2 mobile-pro-icon" src={item.icon} alt={item.title} />)}
+                {item.icon && !changeBg && (<img className="w-8 pl-2 desk-profile" src={item.icon} alt={item.title} />)}
+                {item.icon && changeBg && (<img className="w-8 pl-2 desk-profile" src={item.icon_dark} alt={item.title} />)}
               </Link>
             </li>
           ))}

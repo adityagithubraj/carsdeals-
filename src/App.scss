@@ -27,7 +27,7 @@ ul.navigation-ul li a {
   background-image: url("./assets/banner.png");
   background-size: cover;
   background-position: right;
-  height: 87vh;
+  height: 100vh;
   .banner-btn {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -206,13 +206,14 @@ input.filter[type="radio"]:checked + label {
   left: 0px !important;
 }
 @media only screen and (max-width: 768px) {
-  .banner-txt h1 br {
+
+  .banner-txt h1 br , img.desk-profile{
     display: none;
   }
 }
 
 @media only screen and (min-width: 769px) {
-  .ham-icon {
+  .ham-icon , img.mobile-pro-icon{
     display: none;
   }
   .mob-banner-txt {

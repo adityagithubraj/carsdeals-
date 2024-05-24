@@ -1,4 +1,6 @@
 import regIcon from '../assets/loginbtn.png'
+import darkProfile from '../assets/dark_profile.png'
+
 
 export const navItems = [
   {
@@ -20,6 +22,7 @@ export const navItems = [
     id: "4",
     title: "Log in/Sign up",
     icon: regIcon,
+    icon_dark:darkProfile,
     routeLink:'/login',
   },
 ];
