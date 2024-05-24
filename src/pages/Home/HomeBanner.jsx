@@ -20,7 +20,7 @@ function HomeBanner() {
             of the road with our
             <br /> top-notch cars!"
           </h1>
-          <p className="text-white text-2xl text-center md:text-left w-full desk-btn" >
+          <p className="text-white text-2xl 2xl:text-4xl text-center md:text-left w-full desk-btn" >
             Buy a quality second-hand car
           </p>
           <button className="text-white banner-btn text-md md:text-xl py-2 px-4 tavira desk-btn">
