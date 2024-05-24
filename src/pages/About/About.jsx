@@ -1,6 +1,6 @@
 import React from "react";
 import PageHeader from "../../components/PageHeader";
-import banner from "../../assets/PageBanner.png";
+import banner from "../../assets/banner_new.png";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import { useEffect } from "react";
 

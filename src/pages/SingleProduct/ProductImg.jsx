@@ -60,7 +60,7 @@ const ProductImg = () => {
     ]
   };
   return (
-    <div className="slider-container pt-10">
+    <div className="slider-container pdp-slider">
       <Slider {...settings}>
         {singleCarImage.map((item, index) => (
           <div className='px-2' key={index}>

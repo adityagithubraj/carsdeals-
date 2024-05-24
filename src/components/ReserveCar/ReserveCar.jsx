@@ -55,12 +55,15 @@ const ReserveCar = ({ isModalOpen, closeModal , btnSubmit , car }) => {
                 ))}
               </div>
               <div className="text-center">
-                <button
+                {/* <button
                   onClick={ btnSubmit }
                   className="rounded-full bg-black text-white py-1 px-7 taviraj mt-2 md:mt-6 text-md md:text-lg md:py-2 "
                 >
                   Reserve this car
-                </button>
+                </button> */}
+                <button onClick={btnSubmit} className="rounded-full bg-black text-white py-3 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
+                Reserve this car
+        </button>
               </div>
             </div>
           </div>

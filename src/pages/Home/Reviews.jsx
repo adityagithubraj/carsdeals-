@@ -72,7 +72,7 @@ function Reviews() {
   };
 
   return (
-    <div className="container mx-auto pt-[2rem] review pb-[11rem] px-5">
+    <div className="container mx-auto pt-[3rem] review pb-[11rem] px-5">
       <SectionHeading
         head="Hear it from our happy customers"
         subtext="Read what our delighted customers have to say"

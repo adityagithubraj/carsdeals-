@@ -34,6 +34,18 @@ ul.navigation-ul li a {
   }
 }
 
+.desk-btn{
+  @media only screen and (max-width:768px){
+    display:none;
+  }
+}
+
+.mob-btn{
+  @media only screen and (min-width:769px){
+    display:none;
+  }
+}
+
 .secondary-color {
   // color: #CAFFAE;
   background-color: #caffae;
@@ -205,12 +217,25 @@ input.filter[type="radio"]:checked + label {
 .show {
   left: 0px !important;
 }
+
+.pdp-slider{
+  @media only screen and (min-width:769px){
+    padding-top:100px;
+  }
+  @media only screen and (max-width:768px){
+    padding-top:68px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .page-banner{
     margin-top:58px;
   }
   .banner-txt h1 br , img.desk-profile{
     display: none;
+  }
+  .home-banner {
+    padding-top: 65px !important;
   }
 }
 

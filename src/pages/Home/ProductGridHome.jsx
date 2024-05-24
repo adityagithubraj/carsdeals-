@@ -72,9 +72,9 @@ function ProductGridHome() {
         })}
       </div>
       <div className="flex justify-center w-full mt-5">
-        <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
+        {/* <button className="rounded-full bg-black text-white py-1 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
           View All
-        </button>
+        </button> */}
       </div>
 
       <FilterModal

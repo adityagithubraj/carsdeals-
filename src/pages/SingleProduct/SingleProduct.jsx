@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import ProductImg from "./ProductImg";
-
-
+import { ToastContainer, toast } from "react-toastify";
 import { carSummary } from "../../constants/CarSummary";
 import { carSpecifications } from "../../constants/FAQ";
 
@@ -40,6 +39,11 @@ const SingleProduct = () => {
 
   const finalModalClose = () => {
     setFinalModalVisibility(false);
+  };
+  const finalModalSubmit = () => {
+    setFinalModalVisibility(false);
+    const notify = () => toast.success("Your Car Is Reserved !!!");
+    notify();
   };
 
   const buttonClose = () => {
@@ -150,8 +154,10 @@ const SingleProduct = () => {
         <ReserveModal
           visibility={finalModalVisibility}
           cancelHandler={finalModalClose}
+          onFormSubmit={finalModalSubmit}
         />
       )}
+      <ToastContainer autoClose={2500}/>
     </div>
   );
 };

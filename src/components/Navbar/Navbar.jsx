@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { MenuOutlined } from "@ant-design/icons";
 import { navItems } from "../../constants/Navitems";
 import logo from "../../assets/cardeallogo.png";
 import darkLogo from "../../assets/black-logo.png";
-import { Link } from "react-router-dom";
-import { ConsoleSqlOutlined, MenuOutlined } from "@ant-design/icons";
-import { useState } from "react";
-import { useEffect } from "react";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [changeBg, setChangeBg] = useState(false);
   const top_offset = 500;
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +20,24 @@ function Navbar() {
       }
     };
     window.addEventListener("scroll", handleScroll);
-  });
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Effect to handle URL change
+  useEffect(() => {
+    // Close the menu when the URL changes
+    setShowMenu(false);
+  }, [location]);
 
   return (
     <div
-      className={`fixed w-[100%] flex justify-between py-3 px-10  ${
+      className={`fixed w-[100%] flex justify-between py-3 px-10 ${
         changeBg ? "glass-effect" : "bg-black"
-      }  nav-outer	z-10`}
+      } nav-outer z-10`}
     >
       <div className="flex items-center">
         <Link to="/">
@@ -53,16 +63,34 @@ function Navbar() {
         <ul className={`flex navigation-ul ${showMenu ? "show" : ""}`}>
           {navItems.map((item) => (
             <li
-              className={`nav-item px-3  ${
+              className={`nav-item px-3 ${
                 changeBg ? "text-black" : "text-white"
-              }  flex justify-center items-center text-xl`}
+              } flex justify-center items-center text-xl`}
               key={item.id}
             >
               <Link to={item.routeLink} className="flex items-center">
                 {item.title}
-                {item.icon && (<img className="w-8 pl-2 mobile-pro-icon" src={item.icon} alt={item.title} />)}
-                {item.icon && !changeBg && (<img className="w-8 pl-2 desk-profile" src={item.icon} alt={item.title} />)}
-                {item.icon && changeBg && (<img className="w-8 pl-2 desk-profile" src={item.icon_dark} alt={item.title} />)}
+                {item.icon && (
+                  <img
+                    className="w-8 pl-2 mobile-pro-icon"
+                    src={item.icon}
+                    alt={item.title}
+                  />
+                )}
+                {item.icon && !changeBg && (
+                  <img
+                    className="w-8 pl-2 desk-profile"
+                    src={item.icon}
+                    alt={item.title}
+                  />
+                )}
+                {item.icon && changeBg && (
+                  <img
+                    className="w-8 pl-2 desk-profile"
+                    src={item.icon_dark}
+                    alt={item.title}
+                  />
+                )}
               </Link>
             </li>
           ))}

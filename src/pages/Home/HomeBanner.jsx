@@ -20,15 +20,22 @@ function HomeBanner() {
             of the road with our
             <br /> top-notch cars!"
           </h1>
-          <p className="text-white text-2xl text-center md:text-left w-full">
+          <p className="text-white text-2xl text-center md:text-left w-full desk-btn" >
             Buy a quality second-hand car
           </p>
-          <button className="text-white banner-btn text-md md:text-xl py-2 px-4 taviraj">
+          <button className="text-white banner-btn text-md md:text-xl py-2 px-4 tavira desk-btn">
             {" "}
             Buy - +91 9264492644
           </button>
         </div>
         <div className="w-full flex flex-col justify-center items-center">
+        <p className="text-white text-2xl text-center md:text-left w-full mob-btn mb-4">
+            Buy a quality second-hand car
+          </p>
+        <button className="text-white banner-btn text-md md:text-xl py-2 px-4 taviraj mob-btn mb-4">
+            {" "}
+            Buy - +91 9264492644
+          </button>
           <p className="text-white text-center">Scroll down to explore</p>
 
           <img

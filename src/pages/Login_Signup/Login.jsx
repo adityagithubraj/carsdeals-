@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../assets/PageBanner.png";
+import banner from "../../assets/banner_new.png";
 import PageHeader from "../../components/PageHeader";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import InputField from "../../components/InputField";
@@ -45,7 +45,7 @@ function Login() {
   return (
     <>
       <PageHeader imgSrc={banner} />
-      <div className="container mx-auto my-[5rem] px-5">
+      <div className="container mx-auto my-[2rem] md:my-[5rem] px-5">
         <SectionHeading head="Already have an account! " />
         <div className="contact-form border-2 w-full md:w-[80%] mx-auto p-4 md:p-9 shadow-lg	my-10">
           <form onSubmit={handleFormSubmit}>

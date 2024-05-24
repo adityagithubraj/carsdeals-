@@ -4,7 +4,13 @@ import paytm from '../assets/paytm.png'
 import phonepe from '../assets/phonepq.png'
 import google from '../assets/google.png'
 
-function ReserveModal({ onFormSubmit, visibility, cancelHandler }) {
+function ReserveModal({ visibility, cancelHandler , onFormSubmit }) {
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert('submit');
+  // }
+
   return (
     <Modal
       visible={visibility}
@@ -19,7 +25,7 @@ function ReserveModal({ onFormSubmit, visibility, cancelHandler }) {
         <p className='text-[#3BAB00] text-2xl md:text-3xl rufina my-1 md:my-3'>Pay 2 lacs &amp; Reserve Car for 24 hrs</p>
         <p className='text-[#606060] mb-7 rufina text-sm md:text-xl'>Just a few steps away from making your dream car a reality! Fill in a few details and we can begin the <br /> reservation…</p>
 
-        <form>
+        <form onSubmit={onFormSubmit}>
             <h3 className='text-xl font-semibold rufina mb-3'>PERSONAL INFORMATION</h3>
             <div className='grid gridf-cols-1 md:grid-cols-2 gap-3'>
                 <input type="text" placeholder='Name' className=' placeholder-black	 px-2 py-3 border border-black rounded-lg'/>
@@ -34,8 +40,11 @@ function ReserveModal({ onFormSubmit, visibility, cancelHandler }) {
                 <img  src={google}  className='w-[30px] md:w-[50px]'/>
             </div>
 
-            <button type='submit' className="rounded-full bg-black text-white py-1 px-7 taviraj mt-2 md:mt-6 text-md md:text-lg md:py-2 w-full">
+            {/* <button type='submit' className="rounded-full bg-black text-white py-1 px-7 taviraj mt-2 md:mt-6 text-md md:text-lg md:py-2 w-full">
           Reserve this car
+        </button> */}
+        <button type='submit' className="rounded-full w-full bg-black text-white py-3 px-7 taviraj mt-6 text-md md:text-lg md:py-2">
+                Reserve this car
         </button>
         </form>
 
